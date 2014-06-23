@@ -8,7 +8,30 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Gui Test")
+        self.create_initial_layout()
 
+    def create_initial_layout(self):
+
+        #create widgets
+        self.textbox = QLineEdit()
+        self.button = QPushButton("Submit")
+        self.label = QLabel()
+        
+        #create layout
+
+        self.layout = QVBoxLayout()
+
+        #add widgets to the layout
+
+        self.layout.addWidget(self.textbox)
+        self.layout.addWidget(self.button)
+        self.layout.addWidget(self.label)
+
+        #set the central widget
+
+        self.widget = QWidget()
+        self.widget.setLayout(self.layout)
+        self.setCentralWidget(self.widget)
 
 
 
