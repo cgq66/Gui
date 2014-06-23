@@ -33,6 +33,14 @@ class MainWindow(QMainWindow):
         self.widget.setLayout(self.layout)
         self.setCentralWidget(self.widget)
 
+        #button connection
+        self.button.clicked.connect(self.display_text)
+        self.textbox.returnPressed.connect(self.display_text)
+
+    def display_text(self):
+        name = self.textbox.text()
+        self.label.setText("Hello {0}".format(name))
+
 
 
 if __name__ == "__main__":
