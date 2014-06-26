@@ -32,11 +32,15 @@ class MainWindow(QMainWindow):
         if self.stacked_layout.currentIndex() == 0:
             
             self.stacked_layout.setCurrentIndex(1)
+
+            
             self.greetingLabel.setText("Hello, {0}".format(self.nameLineEdit.text()))
             
         elif self.stacked_layout.currentIndex() == 1:
             
             self.stacked_layout.setCurrentIndex(0)
+
+            
             self.nameLineEdit.clear()
 
     def first_layout(self):
